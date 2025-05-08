@@ -9,12 +9,12 @@ const {
   updateProject,
 } = require('../controllers/projectController');
 
-// Public routes
-router.get('/', getProjects);           // Browse all approved projects
-router.get('/:id', getProjectById);     // View specific project
+router.get('/', getProjects);           
+router.get('/:id', getProjectById);     
 
-// Protected (Organizer) routes
+
 router.post('/', protect, createProject);
 router.put('/:id', protect, updateProject);
 
 module.exports = router;
+
